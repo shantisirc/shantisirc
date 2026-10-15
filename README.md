@@ -9,7 +9,8 @@ Shree Shanti Namuna Secondary School, Tilottama-5, Manigram, Rupandehi, Nepal.
 | ------------ | ------------------------------------------- |
 | `index.html` | The page (logo + "under development" text)  |
 | `style.css`  | All the styling (colors, layout, animation) |
-| `logo.jpg`   | Club logo                                   |
+| `logo.png`   | Club logo (round, transparent background)   |
+| `favicon.png`| Small icon shown in the browser tab         |
 | `README.md`  | This file                                   |
 
 ## How to view it
@@ -19,7 +20,7 @@ Double-click `index.html` to open it in your browser.
 ## How to put it online (free, GitHub Pages)
 
 1. Create a new repository on GitHub (for example `ssirc-website`).
-2. Upload `index.html`, `style.css` and `logo.jpg`.
+2. Upload `index.html`, `style.css`, `logo.png` and `favicon.png`.
 3. Go to **Settings → Pages**.
 4. Under **Branch**, choose `main` and folder `/ (root)`, then click **Save**.
 5. After a minute your site is live at `https://YOUR-USERNAME.github.io/ssirc-website/`.
@@ -28,7 +29,7 @@ Double-click `index.html` to open it in your browser.
 
 - **Change the message:** edit the `<h1>` line in `index.html`.
 - **Change colors:** edit the values at the top of `style.css` (`--bg`, `--ink`, `--teal`).
-- **Change the logo:** replace `logo.jpg` with a new image of the same name.
+- **Change the logo:** replace `logo.png` with a new image of the same name.
 
 ## Features
 
