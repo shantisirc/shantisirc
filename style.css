@@ -1,0 +1,94 @@
+/* SSIRC – under development page */
+
+/* Colors (light + dark) */
+:root {
+  --bg: #f3f7f6;
+  --ink: #0e2540;
+  --teal: #08808b;
+  --line: #cfdcd9;
+  --head: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a1a2c;
+    --ink: #eaf3f1;
+    --teal: #3fc4b3;
+    --line: #24405d;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+/* Keeps content clear of phone notches and bars */
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--head);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo */
+.logo {
+  width: min(70vw, 280px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 0 8px var(--bg), 0 0 0 11px var(--teal);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Message */
+h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  max-width: 18ch;
+}
+
+/* Loading bar */
+.bar {
+  width: min(60vw, 220px);
+  height: 6px;
+  border-radius: 99px;
+  background: var(--line);
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  width: 40%;
+  border-radius: 99px;
+  background: var(--teal);
+  animation: slide 1.8s ease-in-out infinite;
+}
+
+@keyframes float { 50% { transform: translateY(-8px); } }
+@keyframes slide { 0% { margin-left: -40%; } 100% { margin-left: 100%; } }
+
+/* Respect "reduce motion" setting */
+@media (prefers-reduced-motion: reduce) {
+  .logo, .bar i { animation: none; }
+  .bar i { margin-left: 0; }
+}
